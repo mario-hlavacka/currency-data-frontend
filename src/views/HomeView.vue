@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import CurrencyTable from '@/components/CurrencyTable.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <CurrencyTable />
   </main>
 </template>
