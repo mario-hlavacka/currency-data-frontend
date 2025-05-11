@@ -20,6 +20,15 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 npm install
 ```
 
+Create `.env` file in the project root by copying `.env.example`, and update it with the appropriate values for your environment:
+
+```
+VITE_REVERB_APP_KEY=vd54r1cei9x1246o0dv7
+VITE_REVERB_HOST=localhost
+VITE_REVERB_PORT=8080
+VITE_REVERB_SCHEME=http
+```
+
 ### Compile and Hot-Reload for Development
 
 ```sh
