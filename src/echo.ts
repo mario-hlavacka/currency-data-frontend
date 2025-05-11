@@ -10,7 +10,7 @@ declare global {
 }
 
 window.Pusher = Pusher
-console.log(import.meta.env.VITE_REVERB_APP_KEY)
+
 const echo = new Echo({
   broadcaster: 'reverb',
   key: import.meta.env.VITE_REVERB_APP_KEY,
