@@ -26,6 +26,9 @@
         </tr>
       </tbody>
     </table>
+    <div v-if="loading" role="status" class="text-center py-5">
+      <LoadingSpinner />
+    </div>
   </div>
 </template>
 
@@ -34,8 +37,10 @@ import echo from '../echo'
 import axios from 'axios'
 import { ref, onMounted } from 'vue'
 import type { Currency } from '@/types/Currency'
+import LoadingSpinner from './LoadingSpinner.vue'
 
 const currencies = ref<Currency[]>([])
+const loading = ref<boolean>(true)
 const headers = ['Source', 'Name', 'Icon', 'Current price', 'Percentage change 24h', 'Market cap']
 
 onMounted(() => {
@@ -43,6 +48,7 @@ onMounted(() => {
     .get('http://127.0.0.1:8000/api/currencies')
     .then((response) => {
       currencies.value = response.data
+      loading.value = false
     })
     .catch((error) => {
       console.error('There was an error fetching the data:', error)
