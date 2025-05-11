@@ -23,6 +23,8 @@ npm install
 Create `.env` file in the project root by copying `.env.example`, and update it with the appropriate values for your environment:
 
 ```
+VITE_CURRENCIES_ENDPOINT_URL=http://127.0.0.1:8000/api/currencies
+
 VITE_REVERB_APP_KEY=vd54r1cei9x1246o0dv7
 VITE_REVERB_HOST=localhost
 VITE_REVERB_PORT=8080

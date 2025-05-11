@@ -45,7 +45,7 @@ const headers = ['Source', 'Name', 'Icon', 'Current price', 'Percentage change 2
 
 onMounted(() => {
   axios
-    .get('http://127.0.0.1:8000/api/currencies')
+    .get(import.meta.env.VITE_CURRENCIES_ENDPOINT_URL)
     .then((response) => {
       currencies.value = response.data
       loading.value = false
